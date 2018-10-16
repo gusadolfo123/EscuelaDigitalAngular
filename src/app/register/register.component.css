@@ -1,0 +1,16 @@
+.login {
+  background-color: #17a2b8;
+  -webkit-box-shadow: 1px 5px 5px -1px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 1px 5px 5px -1px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 1px 5px 5px -1px rgba(0, 0, 0, 0.75) !important;
+}
+.login-btn {
+  /* background-color: #414d7a; */
+  background-color: #107786 !important;
+  color: whitesmoke;
+}
+.login-btn:hover {
+  /* background-color: #414d7a; */
+  background-color: #107686bb !important;
+  color: whitesmoke;
+}

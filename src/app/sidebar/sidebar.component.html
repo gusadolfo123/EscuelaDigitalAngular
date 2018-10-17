@@ -5,14 +5,16 @@
   </div>
 
   <ul class="list-unstyled components">
-    <div class="text-center">
+
+    <div class="text-center" *ngIf="isLoged">
       <img src="https://via.placeholder.com/150x150" class="rounded-circle" width="50%">
       <p>Gustavo Moreno</p>
     </div>
+
     <li>
       <a routerLink="home"><i class="fas fa-home"></i> Inicio</a>
     </li>
-    <li>
+    <li *ngIf="isLoged">
       <a href="#cursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> <i class="fas fa-book-open"></i>
         Mis
         Cursos</a>
@@ -31,15 +33,15 @@
     <li>
       <a routerLink="categories"><i class="fas fa-book-open"></i> Caregorias</a>
     </li>
-    <li>
+    <li *ngIf="isLoged">
       <a href="#"><i class="far fa-star"></i> Favoritos</a>
     </li>
-    <li>
+    <li *ngIf="isLoged">
       <a href="#"><i class="far fa-comment"></i> Mensajes</a>
     </li>
   </ul>
 
-  <ul class="list-unstyled CTAs">
+  <ul class="list-unstyled CTAs" *ngIf="isLoged">
     <li>
       <a href="#" class="article text-left"><i class="fas fa-cog"></i> Ajustes</a>
     </li>

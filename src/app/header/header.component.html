@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
 
-    <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <button *ngIf="this.menuLoginService.getIsLoged()" (click)="showSidebar()" type="button" id="sidebarCollapse" class="btn btn-info">
       <i class="fas fa-align-left"></i><span> Menu</span>
     </button>
     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -10,6 +10,21 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" *ngIf="!this.menuLoginService.getIsLoged()">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="home">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="categories">Categorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home">Conocenos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home">Contacto</a>
+        </li>
+      </ul>
+
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" routerLink="login">Ingresar</a>

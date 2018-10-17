@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as $ from "jquery";
+import { MenuLoginService } from "../services/MenuLoginService";
 
 @Component({
   selector: "app-header",
@@ -7,21 +8,17 @@ import * as $ from "jquery";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private menuLoginService: MenuLoginService) {}
 
-  ngOnInit() {
-    $(document).ready(function() {
-      $("#sidebarCollapse").on("click", function() {
-        // agrego estilo container cuando se ocula el sidebar
-        if (
-          $("#sidebar").attr("class") == "" ||
-          $("#sidebar").attr("class") == undefined
-        )
-          $("#content").attr("class", "container");
-        else $("#content").attr("class", "");
+  ngOnInit() {}
 
-        $("#sidebar").toggleClass("active");
-      });
-    });
+  showSidebar() {
+    $("#sidebar").toggleClass("active");
+    if (
+      $("#sidebar").attr("class") == "" ||
+      $("#sidebar").attr("class") == undefined
+    )
+      $("#content").attr("class", "container");
+    else $("#content").attr("class", "");
   }
 }

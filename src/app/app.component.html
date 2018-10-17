@@ -1,6 +1,7 @@
 <div class="wrapper">
 
-    <app-sidebar></app-sidebar>
+
+    <app-sidebar *ngIf="menuLoginService.getIsLoged()"></app-sidebar>
 
     <!-- Page Content  -->
     <div id="content">

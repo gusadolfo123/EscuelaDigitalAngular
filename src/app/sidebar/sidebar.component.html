@@ -6,7 +6,7 @@
 
   <ul class="list-unstyled components">
 
-    <div class="text-center" *ngIf="isLoged">
+    <div class="text-center">
       <img src="https://via.placeholder.com/150x150" class="rounded-circle" width="50%">
       <p>Gustavo Moreno</p>
     </div>
@@ -14,7 +14,7 @@
     <li>
       <a routerLink="home"><i class="fas fa-home"></i> Inicio</a>
     </li>
-    <li *ngIf="isLoged">
+    <li>
       <a href="#cursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> <i class="fas fa-book-open"></i>
         Mis
         Cursos</a>
@@ -33,15 +33,15 @@
     <li>
       <a routerLink="categories"><i class="fas fa-book-open"></i> Caregorias</a>
     </li>
-    <li *ngIf="isLoged">
+    <li>
       <a href="#"><i class="far fa-star"></i> Favoritos</a>
     </li>
-    <li *ngIf="isLoged">
+    <li>
       <a href="#"><i class="far fa-comment"></i> Mensajes</a>
     </li>
   </ul>
 
-  <ul class="list-unstyled CTAs" *ngIf="isLoged">
+  <ul class="list-unstyled CTAs">
     <li>
       <a href="#" class="article text-left"><i class="fas fa-cog"></i> Ajustes</a>
     </li>
@@ -49,7 +49,7 @@
       <a href="#" class="article text-left"><i class="fas fa-file"></i> Terminos y Condiciones</a>
     </li>
     <li>
-      <a href="#" class="article text-left"><i class="fas fa-sign-out-alt"></i> Salir</a>
+      <a routerLink="" (click)="leave()" class="article text-left"><i class="fas fa-sign-out-alt"></i> Salir</a>
     </li>
   </ul>
 </nav>

@@ -25,6 +25,21 @@ export class ListCategoriesComponent implements OnInit {
         id: 3,
         title: "Geografia",
         urlImage: "https://via.placeholder.com/150x150"
+      },
+      {
+        id: 1,
+        title: "Matematicas",
+        urlImage: "https://via.placeholder.com/150x150"
+      },
+      {
+        id: 2,
+        title: "Español",
+        urlImage: "https://via.placeholder.com/150x150"
+      },
+      {
+        id: 3,
+        title: "Geografia",
+        urlImage: "https://via.placeholder.com/150x150"
       }
     ];
   }

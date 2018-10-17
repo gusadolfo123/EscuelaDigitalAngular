@@ -12,6 +12,7 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { FooterComponent } from "./footer/footer.component";
 import { SliderComponent } from "./slider/slider.component";
+import { FormsModule } from "@angular/forms";
 
 const routes: Route[] = [
   { path: "", component: HomeComponent },
@@ -34,7 +35,7 @@ const routes: Route[] = [
     FooterComponent,
     SliderComponent
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
